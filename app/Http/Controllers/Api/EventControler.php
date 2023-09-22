@@ -19,6 +19,8 @@ class EventControler extends Controller
         $this->relations = [
             'user', 'attendees', 'attendees.user'
         ];
+
+        $this->middleware('auth:sanctum')->except(['index', 'show']);
     }
 
     /**
@@ -45,7 +47,7 @@ class EventControler extends Controller
                 'start_time' => 'required|date',
                 'end_time' => 'required|date|after:start_time',
             ]),
-            'user_id' => 1
+            'user_id' => $request->user()->id
         ]);
 
         return new EventResource(
