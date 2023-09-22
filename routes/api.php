@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('events', EventControler::class);
 Route::apiResource('events.attendees', AttendeeControler::class)
-    ->scoped(['attendee' => 'event']);
+    ->scoped()
+    ->except(['update']);
