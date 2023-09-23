@@ -2,6 +2,8 @@
 
 Tasks list project - https://www.udemy.com/course/laravel-beginner-fundamentals/
 
+You will need https://github.com/axllent/mailpit for your local mailing testing
+
 Live demo: https://l10-myevents.liviuhariton.com/
 
 ## License
